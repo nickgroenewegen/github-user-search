@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
+import { Suspense } from 'react'
 import classNames from 'classnames'
 
 import Container from '@DS/components/layout/container'
 import Header from '@app/_components/header'
 import Footer from '@app/_components/footer'
+import Loader from '@app/_components/loader'
 
 // Given more thought DS tokens could replace these imports.
 import '@DS/variables.css'
@@ -13,7 +15,7 @@ import '@DS/defaults.css'
 import DSBoxStyles from '@DS/components/layout/box/styles.module.css'
 import DSStackStyles from '@DS/components/layout/stack/styles.module.css'
 
-export const fontFamilyprimary = Open_Sans({
+const fontFamilyprimary = Open_Sans({
   subsets: ['latin'],
   variable: '--font-family-primary',
   display: 'swap',
@@ -33,7 +35,9 @@ const Layout = ({ search_results, children }: Props) => (
       <main>
         <Container className={containerClassNames}>
           {children}
-          {search_results}
+          <Suspense fallback={<Loader />}>
+            {search_results}
+          </Suspense>
         </Container>
       </main>
       <Footer />

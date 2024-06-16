@@ -1,7 +1,7 @@
 import Flex from '@DS/components/layout/flex'
 import SearchForm from '@app/_components/search-form'
 
-export const Page = () => (
+const Page = () => (
   <Flex>
     <div>
       <h1>GitHub user search</h1>

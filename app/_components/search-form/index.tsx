@@ -11,7 +11,7 @@ const SearchForm = () => {
   return (
     <form action={action} role="search" data-test-id="search-form" className={styles['search-form']}>
       <label htmlFor="search" className={DSstyles['sr-only']}>Search term</label>
-      <input id="search" name="q" type="search" autoComplete="off" placeholder="e.g. John, some@email.com" />
+      <input id="search" name="q" type="search" autoComplete="off" placeholder="e.g. john, some@email.com" />
       <button type="submit">Search</button>
       <p aria-live="polite" role="status">
         {message}

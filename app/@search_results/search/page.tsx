@@ -53,9 +53,4 @@ const Page = async ({ searchParams: { q } }: Props) => {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Results - GitHub user search',
-  description: '',
-}
-
 export default Page

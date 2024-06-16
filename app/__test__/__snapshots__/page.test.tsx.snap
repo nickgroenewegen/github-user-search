@@ -28,7 +28,7 @@ exports[`Correctly renders the home and should be stable 1`] = `
         autocomplete="off"
         id="search"
         name="q"
-        placeholder="e.g. John, some@email.com"
+        placeholder="e.g. john, some@email.com"
         type="search"
       />
       <button
