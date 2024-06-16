@@ -1,0 +1,10 @@
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-family-primary);
+}
+
+a.brand {
+    text-decoration: none;
+}

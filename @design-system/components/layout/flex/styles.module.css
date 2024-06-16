@@ -1,0 +1,5 @@
+.flex {
+    display: flex;
+    gap: var(--spacing-default);
+    flex-wrap: wrap;
+}

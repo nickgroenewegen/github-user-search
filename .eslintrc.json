@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "plugin:cypress/recommended",
+    "plugin:@stylistic/recommended-extends",
+    "next/core-web-vitals"
+  ]
+}

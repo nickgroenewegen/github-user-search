@@ -1,0 +1,8 @@
+:root {
+    --max-page-width: 80rem;
+    --spacing-default: 1rem;
+    --color-primary: purple;
+    --color-secondary: green;
+    --color-gray: gray;
+    --color-gray-light: #f2f2f2;
+}
