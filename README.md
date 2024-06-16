@@ -64,3 +64,11 @@ To run Cypress in interactive mode:
 ```sh
 $ npm run e2e:interactive
 ```
+
+## Husky
+[Husky](https://typicode.github.io/husky/) runs before any git commit as a safeguard. It runs the following commands:
+```sh
+npm run lint
+npm run lint:css
+npm run test
+```
