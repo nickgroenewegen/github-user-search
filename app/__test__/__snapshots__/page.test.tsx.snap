@@ -27,8 +27,10 @@ exports[`Correctly renders the home and should be stable 1`] = `
       <input
         autocomplete="off"
         id="search"
+        minlength="3"
         name="q"
         placeholder="e.g. john, some@email.com"
+        required=""
         type="search"
       />
       <button
@@ -36,10 +38,6 @@ exports[`Correctly renders the home and should be stable 1`] = `
       >
         Search
       </button>
-      <p
-        aria-live="polite"
-        role="status"
-      />
     </form>
   </div>
 </div>

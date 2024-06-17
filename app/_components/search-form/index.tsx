@@ -11,11 +11,14 @@ const SearchForm = () => {
   return (
     <form action={action} role="search" data-test-id="search-form" className={styles['search-form']}>
       <label htmlFor="search" className={DSstyles['sr-only']}>Search term</label>
-      <input id="search" name="q" type="search" autoComplete="off" placeholder="e.g. john, some@email.com" />
+      <input id="search" name="q" type="search" autoComplete="off" placeholder="e.g. john, some@email.com" required minLength={3} />
       <button type="submit">Search</button>
-      <p aria-live="polite" role="status">
-        {message}
-      </p>
+      {message && (
+        <p aria-live="polite" role="status" data-test-id="search-form-validation-message">
+          {message}
+        </p>
+      )}
+
     </form>
   )
 }

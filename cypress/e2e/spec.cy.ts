@@ -1,4 +1,4 @@
-import { assertSearch } from './actions'
+import { assertSearch, assertSearchValidation } from './actions'
 
 describe('Github user search', () => {
   beforeEach(() => {
@@ -11,11 +11,14 @@ describe('Github user search', () => {
       .and('contain', 'GitHub user search')
 
     cy.get('p')
-      .should('have.length', 1)
-      .and('contain', 'Query the GitHub search API to find users or organizations you\'re looking for.')
+      .contains('Query the GitHub search API to find users or organizations you\'re looking for.')
   })
 
   it('Should be able to search for specific users', () => {
     assertSearch('nickgroenewegen')
+  })
+
+  it.only('Should show validation errors when', () => {
+    assertSearchValidation('a')
   })
 })

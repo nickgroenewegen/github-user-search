@@ -1,5 +1,8 @@
 # GitHub user search exercise
-A exercise project using [Next.js](https://nextjs.org/) and React Server Components.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a7b5cbe0-d4c7-43d7-be5b-5a2abe433d8f/deploy-status)](https://app.netlify.com/sites/harmonious-cobbler-f2ee26/deploys)
+A exercise project using the [GitHub search API](https://docs.github.com/en/rest/search/search), [Next.js](https://nextjs.org/) and React Server Components.
+
+[Live demo](https://harmonious-cobbler-f2ee26.netlify.app/)
 
 **Stack**
 - Typescript
@@ -12,6 +15,15 @@ A exercise project using [Next.js](https://nextjs.org/) and React Server Compone
 - Jest
 - React Testing Library
 - Cypress
+
+## Authentication
+Note that authentication is not necessary in order to search GitHub for users however adding a authentication token has it's benefits e.g. higher rate limit, access to more data.
+
+In order to add a authentication token first generate a personal access token via [GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic). Then add a `.env` file in the root of the project and add the generated token:
+
+```
+GITHUB_AUTH_TOKEN=your token here
+```
 
 ## Getting started
 This project requires Node.js 18.17 or later.
@@ -48,7 +60,7 @@ $ npm run lint:css
 ```
 
 ## Testing
-[Jest](https://jestjs.io/), [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [Cypress](https://docs.cypress.io/guides/overview/why-cypress) are used for testing. The project contains only a few test.
+[Jest](https://jestjs.io/), [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [Cypress](https://docs.cypress.io/guides/overview/why-cypress) are used for testing. The project contains a few test for demonstration purpose.
 
 To run jest for unit and component tests:
 ```sh

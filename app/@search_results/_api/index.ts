@@ -10,7 +10,15 @@ type User = {
 }
 
 export const searchUsers = async (q: string): Promise<Response> => {
-  const response = await fetch(`https://api.github.com/search/users?q=${encodeURIComponent(q)}`)
+  const authToken = process.env.GITHUB_AUTH_TOKEN
+
+  const response = await fetch(`https://api.github.com/search/users?q=${encodeURIComponent(q)}`, {
+    ...(authToken && {
+      headers: {
+        Authorization: `Bearer ${authToken}`,
+      },
+    }),
+  })
 
   if (!response.ok) {
     throw new Error('Failed to fetch data')
