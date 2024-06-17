@@ -1,5 +1,6 @@
 # GitHub user search exercise
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a7b5cbe0-d4c7-43d7-be5b-5a2abe433d8f/deploy-status)](https://app.netlify.com/sites/harmonious-cobbler-f2ee26/deploys)
+
 A exercise project using the [GitHub search API](https://docs.github.com/en/rest/search/search), [Next.js](https://nextjs.org/) and React Server Components.
 
 [Live demo](https://harmonious-cobbler-f2ee26.netlify.app/)
@@ -8,6 +9,7 @@ A exercise project using the [GitHub search API](https://docs.github.com/en/rest
 - Typescript
 - Nextjs
 - React
+- Netlify
 - ESLint
 - ESLint Stylistic
 - Stylelint
