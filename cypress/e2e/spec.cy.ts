@@ -18,7 +18,7 @@ describe('Github user search', () => {
     assertSearch('nickgroenewegen')
   })
 
-  it.only('Should show validation errors when', () => {
+  it('Should show validation errors when', () => {
     assertSearchValidation('a')
   })
 })
